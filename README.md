@@ -1,3 +1,5 @@
 This is a document called read me.
 I am adding text to see if pulling workflow affected anything badly.
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/40624987/sem/main.yml?branch=master)
+[![LICENSE](https://img.shields.io/github/license/<40624987>/sem.svg?style=flat-square)](https://github.com/<github-username>/sem/blob/master/LICENSE)
+[![Releases](https://img.shields.io/github/release/<40624987>/sem/all.svg?style=flat-square)](https://github.com/<github-username>/sem/releases)
