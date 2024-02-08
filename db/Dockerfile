@@ -1,8 +1,3 @@
-FROM ubuntu:latest
-LABEL authors="40624987"
-
-ENTRYPOINT ["top", "-b"]
-
 # Use the latest MySQL image
 FROM mysql
 # Set the working directory
