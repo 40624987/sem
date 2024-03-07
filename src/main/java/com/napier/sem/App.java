@@ -128,20 +128,21 @@ public class App
         }
     }
 
-    public void displayEmployee(Employee emp)
-    {
-        if (emp != null)
-        {
+    public void displayEmployee(Employee emp) {
+        if (emp != null) {
             System.out.println(
                     emp.emp_no + " "
                             + emp.first_name + " "
                             + emp.last_name + "\n"
-                            + emp.title + "\n"
+                            + (emp.title != null ? emp.title : "N/A") + "\n"
                             + "Salary:" + emp.salary + "\n"
-                            + emp.dept_name + "\n"
-                            + "Manager: " + emp.manager + "\n");
+                            + (emp.dept_name != null ? emp.dept_name : "N/A") + "\n"
+                            + "Manager: " + (emp.manager != null ? emp.manager : "N/A") + "\n");
+        } else {
+            System.out.println("No employee information available.");
         }
     }
+
 
     /**
      * Gets all the current employees and salaries.
@@ -188,11 +189,19 @@ public class App
      */
     public void printSalaries(ArrayList<Employee> employees)
     {
+        // Check employees is not null
+        if (employees == null)
+        {
+            System.out.println("No employees");
+            return;
+        }
         // Print header
         System.out.println(String.format("%-10s %-15s %-20s %-8s", "Emp No", "First Name", "Last Name", "Salary"));
         // Loop over all employees in the list
         for (Employee emp : employees)
         {
+            if (emp == null)
+                continue;
             String emp_string =
                     String.format("%-10s %-15s %-20s %-8s",
                             emp.emp_no, emp.first_name, emp.last_name, emp.salary);
